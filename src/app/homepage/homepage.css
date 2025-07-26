@@ -1,0 +1,217 @@
+/* Global Styles */
+:root {
+    --primary-color: #111111;
+    --accent-color: #FFD700;
+    --text-light: #FFD700;
+    --text-dark: #111111;
+    --transition: all 0.3s ease-in-out;
+}
+
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(120deg, #111111 0%, #222 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px; /* Increased space between navbar and hero section */
+}
+
+.carousel-inner,
+.hero-section img {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    filter: brightness(0.7) blur(0.2px);
+    transition: opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1), transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.7;
+}
+
+.carousel-item.active img {
+    opacity: 1;
+    transform: scale(1.04);
+    filter: brightness(0.9) blur(0px);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(44,62,80,0.7);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 45%;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    background: none; /* Remove card background */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(44,62,80,0.5);
+}
+
+.hero-text p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 8px rgba(44,62,80,0.3);
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 4px 15px rgba(255,215,0,0.08);
+    border-radius: 12px;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--accent-color);
+}
+
+/* Price Styles */
+.price {
+    color: var(--accent-color);
+    text-shadow: 0 1px 8px rgba(255,215,0,0.25);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+/* Stylish Brand */
+.stylish-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #fff !important;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    transition: background 0.3s;
+    gap: 0.7rem;
+}
+
+.stylish-brand:hover {
+    background: #111111;
+}
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-left: 10px;
+    filter: drop-shadow(0 2px 8px rgba(255,215,0,0.25));
+}
+
+/* Animation for cards on scroll */
+.animate-card {
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+    transition: opacity 0.7s cubic-bezier(.23,1,.32,1), transform 0.7s cubic-bezier(.23,1,.32,1);
+    will-change: opacity, transform;
+}
+.animate-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+        padding-top: 120px; /* Increased space for mobile */
+    }
+    .carousel-inner,
+    .hero-section img {
+        height: 60vh;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Hamburger icon size for better visibility */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: 2rem;
+    height: 2rem;
+}

@@ -1,0 +1,72 @@
+/* Review Section */
+.review-card {
+    background: rgba(255,215,0,0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    background: rgba(255,215,0,0.12);
+    transform: translateY(-5px);
+}
+
+/* Form Styles */
+.form-control {
+    background: rgba(255,215,0,0.08);
+    border: 1px solid rgba(255,215,0,0.18);
+    color: var(--accent-color);
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background: rgba(255,215,0,0.15);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(255,215,0,0.25);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #111111;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #bfa100;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: #FFD700;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-section {
+    background: linear-gradient(to bottom, #1a1a1a, #262626);
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
